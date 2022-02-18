@@ -1,0 +1,8 @@
+<%= form_with model: @place do |form| %>
+  <p>
+    <%= form.label "name", "Location" %>
+    <%= form.text_field "name" %>
+    <%= form.hidden_field "place_id" %>
+  </p>
+  <%= form.submit %>
+<% end %>
