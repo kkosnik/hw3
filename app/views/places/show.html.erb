@@ -1,9 +1,10 @@
-<h1><%= @place.name%></h1>
-<h3>Posts</h3>
+<h1>Posts From <%= @place.name%></h1>
 <ul>
     <% place = Place.all.where({id: @place.id})[0] %>
     <% for posts in place.posts %>
-        <li><%= posts.title %>, <%= posts.description%>, <%= posts.posted_on%></li>
+        <h2><%= posts.title %></h2> 
+        <h3><%= posts.description%></h3> 
+        <p>Posted On: <%= posts.posted_on%></p>
     <% end %>
 
 <p>
